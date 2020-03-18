@@ -160,7 +160,10 @@ li {
       .header__slider-controls {
         display: none; } }
   .header__slider-prev {
-    margin-right: 5px; }
+    margin-right: 5px;
+    background-image: url(../images/slider/arrow-left.svg); }
+  .header__slider-next {
+    background-image: url(../images/slider/arrow-right.svg); }
   .header__slider-prev, .header__slider-next {
     position: relative;
     display: inline-block;
@@ -168,6 +171,9 @@ li {
     height: 32px;
     background-color: white;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 5px 9px;
+    background-position: center;
     -webkit-transition: -webkit-transform 200ms;
     transition: -webkit-transform 200ms;
     transition: transform 200ms;
@@ -202,7 +208,7 @@ li {
     cursor: pointer;
     color: white;
     font-size: 22px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1280px) {
       .header__label {
         display: block; } }
   .header__menu {
@@ -253,6 +259,8 @@ li {
     opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
+  .header__menu-list {
+    list-style-type: none; }
 
 .nav {
   padding-top: 39px;
@@ -288,7 +296,7 @@ li {
   .nav__item {
     position: relative;
     padding: 10px 32px; }
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1300px) {
       .nav__item {
         display: none; } }
     .nav__item--hire {
@@ -308,6 +316,8 @@ li {
           display: inline-block; } }
   .nav__link {
     position: relative;
+    display: inline-block;
+    padding: 10px;
     font-size: 13px;
     line-height: 1.5;
     font-weight: 700;
@@ -324,9 +334,9 @@ li {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       bottom: -8px;
-      left: 0;
+      left: 9px;
+      right: 10px;
       height: 2px;
-      width: 100%;
       background-color: #ff9c8e;
       border-radius: 2px;
       opacity: 0;
@@ -635,9 +645,6 @@ li {
     @media screen and (max-width: 768px) {
       .approach__container {
         padding: 120px 50px 100px 120px; } }
-    @media screen and (max-width: 600px) {
-      .approach__container {
-        padding: 120px 50px 100px 90px; } }
     @media screen and (max-width: 600px) {
       .approach__container {
         max-width: 1100px;
